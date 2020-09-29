@@ -1,0 +1,315 @@
+
+.homepage {
+    margin: 100px 0;
+    .furniture {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        &__text {
+            width: 48%;
+            padding-left: 100px;
+            h2 {
+                text-transform: uppercase;
+                font-size: 48px;
+                letter-spacing: 0.7px;
+                position: relative;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    top: 23px;
+                    left: -100px;
+                    width: 85px;
+                    height: 2px;
+                    background: $black-cl;
+                    display: block;
+                }
+            }
+            p {
+                margin: 25px 0;
+                font-size: 16px;
+                letter-spacing: 0.25px;
+                position: relative;
+                padding-right: 85px;
+                opacity: 0.7;
+                font-family: PB;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    top: 10px;
+                    left: -55px;
+                    width: 40px;
+                    height: 2px;
+                    background: $yellow-cl;
+                    display: block;
+                }
+            }
+            a {
+                letter-spacing: 0.7px;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $black-cl;
+                font-size: 16px;
+                font-weight: bold;
+                position: relative;
+                &:before {
+                    
+                    position: absolute;
+                    content: "";
+                    bottom: -2px;
+                    left: 0px;
+                    width: 40px;
+                    height: 2px;
+                    background: $yellow-cl;
+                    display: block;
+                }
+            }
+        }
+        &-img {
+            width: 52%;
+            img {
+                width: 100%;
+                border-radius: 3px;
+            }
+        }
+        &-number {
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+            font-weight: bold;
+            font-size: 36px;
+            &::before {
+                position: absolute;
+                content: "";
+                top: 105px;
+                left: 0px;
+                width: 40px;
+                height: 2px;
+                background: $yellow-cl;
+                display: block;
+                transform: rotate(90deg);
+            }
+        }
+    }
+    .decor {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        margin: 150px 0;
+        &__img {
+            width: 52%;
+            img {
+                width: 100%;
+                border-radius: 3px;
+            }
+        }
+        &__text {
+            width: 48%;
+            text-align: right;
+            padding-right: 100px;
+            h2 {
+                text-transform: uppercase;
+                font-size: 48px;
+                letter-spacing: 0.7px;
+                position: relative;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    top: 25px;
+                    right: -100px;
+                    width: 85px;
+                    height: 2px;
+                    background: black;
+                    display: block;
+                }
+            }
+            p {
+                margin: 25px 0;
+                font-size: 16px;
+                letter-spacing: 0.25px;
+                position: relative;
+                padding-left: 70px;
+                opacity: 0.7;
+                font-family: PB;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    top: 10px;
+                    right: -55px;
+                    width: 40px;
+                    height: 2px;
+                    background: $yellow-cl;
+                    display: block;
+                }
+            }
+            a {
+                letter-spacing: 0.7px;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: black;
+                font-size: 16px;
+                font-weight: bold;
+                position: relative;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    bottom: -2px;
+                    left: 0px;
+                    width: 40px;
+                    height: 2px;
+                    background: $yellow-cl;
+                    display: block;
+                }
+            }
+        }
+        &__number {
+            position: absolute;
+            bottom: 0;
+            right: 10px;
+            font-weight: bold;
+            font-size: 36px;
+            &::before {
+                position: absolute;
+                content: "";
+                top: 105px;
+                left: 0px;
+                width: 40px;
+                height: 2px;
+                background: $yellow-cl;
+                display: block;
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+
+    @include tablet {
+        .furniture {
+            &__text {
+                width: 50%;
+                h2 {
+                    font-size: 36px;
+                }
+                p {
+                    padding-right: 10px;
+                }
+            }
+            &-img {
+                width: 50%;
+            }
+            &-number {
+                display: none;
+            }
+        }
+        .decor {
+            &__text {
+                width: 50%;
+                padding: 0;
+                text-align: left;
+                padding-left: 120px;
+                h2 {
+                    font-size: 36px;
+                    &::after {
+                        left: -100px;
+                        top: 17px;
+                    }
+                }
+                p {
+                    padding: 0;
+                    &::after {
+                        left: -45px;
+                    }
+                }
+            }
+            &__img {
+                width: 50%;
+            }
+            &__number {
+                display: none;
+            }
+        }
+    }
+
+    @include mobile {
+        margin-top: 50px;
+        .furniture {
+            flex-direction: column;
+            &__text {
+                padding: 0 0 50px 0;
+                width: 100%;
+                text-align: center;
+                h2 {
+                    font-size: 36px;
+                    &::before {
+                        display: none;
+                    }
+                }
+                p {
+                    padding: 0;
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+            &-img {
+                width: 100%;
+            }
+        }
+        .decor {
+            flex-direction: column-reverse;
+            margin-top: 50px;
+            &__text {
+                width : 100%;
+                text-align: center;
+                padding: 0 0 50px 0;
+                h2 {
+                    font-size: 36px;
+                    &::after {
+                        display: none;
+                    }
+                }
+                p {
+                    padding: 0;
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+            &__img {
+                width: 100%;
+            }
+        }
+    }
+
+    @include mobile-xxs {
+        margin-top: 50px;
+        .furniture {
+            &__text {
+                h2 {
+                    font-size: 24px;
+                }
+                p {
+                    font-size: 14px;
+                }
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+        .decor {
+            margin-top: 50px;
+            &__text {
+                h2 {
+                    font-size: 24px;
+                }
+                p {
+                    font-size: 14px;
+                }
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

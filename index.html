@@ -37,22 +37,24 @@
                 <ul>
                     <li><a href="">home</a></li>
                     <li>
-                        <a href="">product <i class="fa fa-caret-down" aria-hidden="true"></i></a>
-                        <ul>
+                        <a href="">product
+                            <!-- <i class="fa fa-caret-down" aria-hidden="true"></i> -->
+                        </a>
+                        <!-- <ul>
                             <li><a href="">product 1</a></li>
                             <li><a href="">product 2</a></li>
                             <li><a href="">product 3</a></li>
                             <li><a href="">product 4</a></li>
-                        </ul>
+                        </ul> -->
                     </li>
-                    <li><a href="">item <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                    <!-- <li><a href="">item <i class="fa fa-caret-down" aria-hidden="true"></i></a>
                         <ul>
                             <li><a href="">item 1</a></li>
                             <li><a href="">item 2</a></li>
                             <li><a href="">item 3</a></li>
                             <li><a href="">item 4</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                     <li><a href="">about</a></li>
                 </ul>
             </div>
@@ -119,9 +121,9 @@
         <div class="slider__controll">
             <div class="slide">
                 <p class="number">01</p>
-                <ul>
-                    <!-- <li class="active">1</li> -->
-                </ul>
+                <div class="dotted">
+
+                </div>
             </div>
             <div class="scroll">
                 <img class="mouse" src="./img/mouse.png" alt="">
@@ -261,34 +263,95 @@
             <p class="text-dec">We are a team of professionals in the wood processing and <br>
                 the creation of wooden furniture of the highest class</p>
             <div class="gallery">
-                <div class="gallery__item gallery-01">
-                    <div class="gallery__thumb">
-                        <a href=""><img src="./img/gallery-img-01.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="gallery__item gallery-02">
-                    <div class="gallery__thumb">
-                        <a href=""><img src="./img/gallery-img-02.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="gallery__item gallery-03">
-                    <div class="gallery__thumb">
-                        <a href=""><img src="./img/gallery-img-03.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="gallery__item gallery-04">
-                    <div class="gallery__thumb">
-                        <a href=""><img src="./img/gallery-img-04.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="gallery__item gallery-05">
-                    <div class="gallery__thumb">
-                        <a href=""><img src="./img/gallery-img-05.png" alt=""></a>
-                    </div>
+                <div class="carousel-img" itemscope data-pswp-uid="1">
+                    <figure class="image gallery__thumb img1">
+                        <a href="./img/gallery-img-01.png" data-size="380x240">
+                            <img src="./img/gallery-img-01.png" alt="">
+                        </a>
+                    </figure>
+                    <figure class="image gallery__thumb img2">
+                        <a href="./img/gallery-img-02.png" data-size="380x240">
+                            <img src="./img/gallery-img-02.png" alt="">
+                        </a>
+                    </figure>
+                    <figure class="image gallery__thumb img3">
+                        <a href="./img/gallery-img-03.png" data-size="380x490">
+                            <img src="./img/gallery-img-03.png" alt="">
+                        </a>
+                    </figure>
+                    <figure class="image gallery__thumb img4">
+                        <a href="./img/gallery-img-04.png" data-size="380x240">
+                            <img src="./img/gallery-img-04.png" alt="">
+                        </a>
+                    </figure>
+                    <figure class="image gallery__thumb img5">
+                        <a href="./img/gallery-img-05.png" data-size="380x240">
+                            <img src="./img/gallery-img-05.png" alt="">
+                        </a>
+                    </figure>
                 </div>
             </div>
         </div>
     </section>
+
+    <div id="gallery" class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+
+                <div class="pswp__top-bar">
+
+                    <div class="pswp__counter"></div>
+
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- <div class="pswp__loading-indicator"><div class="pswp__loading-indicator__line"></div></div> -->
+
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip">
+                        <!-- <a href="#" class="pswp__share--facebook"></a>
+					<a href="#" class="pswp__share--twitter"></a>
+					<a href="#" class="pswp__share--pinterest"></a>
+					<a href="#" download class="pswp__share--download"></a> -->
+                    </div>
+                </div>
+
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
 
 
 
